@@ -1,0 +1,8 @@
+---
+- name: Show Config Gaia
+  hosts: GW6
+  connection: httpapi
+  tasks:
+    - name: Show hostname
+      cp_gaia_hostname_facts
+      register: congif_output

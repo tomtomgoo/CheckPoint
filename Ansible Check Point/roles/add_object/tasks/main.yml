@@ -1,0 +1,17 @@
+---
+- name: Add Object
+  hosts: SMS
+  connection: httpapi
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Task to add objects
+      loop: "{{objects_host}}"
+      check_point.mgmt.cp_mgmt_host:
+       name: "{{ item.name }}"
+       ip_address: "{{ item.ip }}"
+       tags: "{{ item.tags }}"
+       auto_publish_session: true
+
+      vars:
+        ansible_checkpoint_domain: "SMC User"

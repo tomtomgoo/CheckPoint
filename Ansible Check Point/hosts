@@ -1,6 +1,6 @@
-[checkpoint]
-SMC_Lab ansible_host=192.168.200.228
-[checkpoint:vars]
+[firewall]
+GW6 ansible_host=192.168.117.138
+[firewall:vars]
 ansible_httpapi_use_ssl=True
 ansible_httpapi_validate_certs=False
 ansible_user=admin
