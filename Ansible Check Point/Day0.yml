@@ -1,0 +1,17 @@
+---
+- name: Day0
+  hosts: checkpoint
+  connection: httpapi
+  vars_files:
+    - vars_object_hosts.yml
+  tasks:
+    - name: Task to add objects
+      loop: "{{objects_host}}"
+      check_point.mgmt.cp_mgmt_host:
+       name: "{{ item.name }}"
+       ip_address: "{{ item.ip }}"
+       tags: "{{ item.tags }}"
+       auto_publish_session: true
+
+      vars:
+        ansible_checkpoint_domain: "SMC User"
