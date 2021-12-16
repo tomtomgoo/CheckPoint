@@ -9,4 +9,4 @@
 
     - name: Afficher le Hostname
       debug:
-        msg: '{{hostname}}
+        msg: '{{hostname}}'
