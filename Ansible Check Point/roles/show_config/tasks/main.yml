@@ -1,8 +1,4 @@
 ---
-- name: Show Config Gaia
-  hosts: GW6
-  connection: httpapi
-  tasks:
     - name: Show hostname
       check_point.gaia.cp_gaia_hostname_facts:
       register: hostname
