@@ -1,6 +1,6 @@
 ---
 - name: Day 0 CheckPoint
-  hosts: GW6
+  hosts: firewall
   connection: httpapi
 
   roles:

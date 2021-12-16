@@ -1,5 +1,5 @@
 [firewall]
-GW6 ansible_host=192.168.117.138
+192.168.117.138
 [firewall:vars]
 ansible_httpapi_use_ssl=True
 ansible_httpapi_validate_certs=False
