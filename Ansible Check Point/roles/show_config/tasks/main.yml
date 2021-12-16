@@ -4,5 +4,9 @@
   connection: httpapi
   tasks:
     - name: Show hostname
-      cp_gaia_hostname_facts
-      register: congif_output
+      check_point.gaia.cp_gaia_hostname_facts:
+      register: hostname
+
+    - name: Afficher le Hostname
+      debug:
+        msg: '{{hostname}}
